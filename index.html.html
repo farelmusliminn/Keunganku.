@@ -129,8 +129,8 @@ function pesan(e){
   var m={"auth/invalid-credential":"Email atau kata sandi salah.","auth/email-already-in-use":"Email sudah terdaftar.","auth/weak-password":"Kata sandi minimal 6 karakter.","auth/invalid-email":"Format email tidak valid."};
   $("err").textContent=m[e.code]||"Gagal: "+e.code;
 }
-$("bLogin").onclick=function(){if(!configured)return;signInWithEmailAndPassword(auth,$("em").value,$("pw").value).catch(pesan)};
-$("bDaftar").onclick=function(){if(!configured)return;createUserWithEmailAndPassword(auth,$("em").value,$("pw").value).catch(pesan)};
+$("bLogin").onclick=function(){if(!configured)return;signInWithEmailAndPassword(auth,$("em").value.trim(),$("pw").value).catch(pesan)};
+$("bDaftar").onclick=function(){if(!configured)return;createUserWithEmailAndPassword(auth,$("em").value.trim(),$("pw").value).catch(pesan)};
 $("out").onclick=function(){signOut(auth)};
 
 // 3. Saat status login berubah, mulai atau hentikan pemantauan data
