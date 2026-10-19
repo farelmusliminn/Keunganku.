@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Keuanganku (Firebase)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<section id="auth" hidden>
+  <h1>Masuk ke Keuanganku</h1>
+  <p>Data tersimpan di akunmu sendiri dan sama di semua perangkat.</p>
+  <input id="em" type="email" placeholder="Email" autocomplete="email" aria-label="Email">
+  <input id="pw" type="password" placeholder="Kata sandi (min. 6 karakter)" autocomplete="current-password" aria-label="Kata sandi">
+  <div id="err" role="alert"></div>
+  <button class="add" id="bLogin" type="button">Masuk</button>
+  <button class="alt" id="bDaftar" type="button">Buat akun baru</button>
+</section>
+<div id="app" hidden>
+<header><h1>Keuanganku</h1><select id="bln" aria-label="Pilih bulan" style="width:auto"></select></header>
+
+<section class="saldo"><small>Saldo bulan ini</small><b id="saldo">Rp0</b></section>
+<div class="row2">
+  <div class="box"><small>Pemasukan</small><b class="in" id="tin">Rp0</b></div>
+  <div class="box"><small>Pengeluaran</small><b class="out" id="tout">Rp0</b></div>
+</div>
+
+<form id="f">
+  <div class="seg" role="group" aria-label="Jenis">
+    <button type="button" id="bOut" class="on">Pengeluaran</button>
+    <button type="button" id="bIn">Pemasukan</button>
+  </div>
+  <div class="g2">
+    <input id="amt" type="number" inputmode="numeric" min="1" placeholder="Jumlah (Rp)" required aria-label="Jumlah">
+    <input id="tgl" type="date" required aria-label="Tanggal">
+  </div>
+  <div class="g2">
+    <select id="kat" aria-label="Kategori"></select>
+    <input id="note" placeholder="Catatan (opsional)" aria-label="Catatan">
+  </div>
+  <button class="add" type="submit">Simpan transaksi</button>
+</form>
+
+<h2>Pengeluaran per kategori</h2>
+<div id="cat"></div>
+
+<div class="rw"><h2>Riwayat transaksi</h2><button type="button" id="tg" aria-expanded="false">Tampilkan</button></div>
+<ul id="list"></ul>
+
+<div class="tools"><button id="exp">Unduh cadangan</button><button id="clr">Hapus semua data</button><button id="out">Keluar</button></div>
+</div>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>
