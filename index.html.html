@@ -98,12 +98,14 @@ li button{border:0;background:none;color:var(--mute);cursor:pointer;font-size:20
 <script type="module">
 // 1. Isi konfigurasi dari Firebase Console (Project settings > Your apps > Web app)
 const firebaseConfig = {
-  apiKey: "ISI_API_KEY",
-  authDomain: "ISI_PROJECT_ID.firebaseapp.com",
-  projectId: "ISI_PROJECT_ID",
-  appId: "ISI_APP_ID"
+  apiKey: "AIzaSyBajjnYdL868-hsshSrn_ur5Nvd6MkcIDI",
+  authDomain: "keuanganku-78121.firebaseapp.com",
+  projectId: "keuanganku-78121",
+  storageBucket: "keuanganku-78121.firebasestorage.app",
+  messagingSenderId: "428307364856",
+  appId: "1:428307364856:web:027e140feb65b6684ef40d",
+  measurementId: "G-41X4Z43P53"
 };
-
 import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import {getFirestore,collection,addDoc,deleteDoc,doc,onSnapshot} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
