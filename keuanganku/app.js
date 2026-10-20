@@ -5,8 +5,8 @@ import {getAuth,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmai
 import {getFirestore,collection,addDoc,deleteDoc,doc,onSnapshot} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 var $=function(i){return document.getElementById(i)};
-var KO=["Makan","Transportasi","Belanja","Tagihan","Hiburan","Kesehatan","Lainnya"];
-var KI=["Gaji","Usaha","Bonus","Lainnya"];
+var KO=["Makan","Bensin","Belanja","Tagihan","Kouta","Kesehatan","Lainnya","Kopi","Rokok"];
+var KI=["Gaji","Usaha","Bonus","Lainnya", "kiriman ortu"];
 var data=[],tipe="out",uid=null,stop=null;
 
 var configured=firebaseConfig.apiKey.indexOf("ISI_")!==0;
